@@ -1,0 +1,11 @@
+backend/.vscode
+backend/node_modules
+backend/prisma.yml
+backend/variables.env
+
+frontend/config.js
+frontend/.next
+frontend/.vscode
+frontend/node_modules
+
+.DS_Store

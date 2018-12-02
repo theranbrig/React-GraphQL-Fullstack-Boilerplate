@@ -1,7 +1,7 @@
 {
-	"name": "grown-backend",
-	"version": "1.0.0",
-	"description": "Grown backend",
+	"name": "REACT GraphQL Boilerplate Backend",
+  "version": "1.0.0",
+  "description": "Next.js / Apollo / GraphQL / Prisma Boilerplate for Backend",
 	"scripts": {
 		"start": "nodemon -e js,graphql -x node src/index.js",
 		"dev": "nodemon -e js,graphql -x node --inspect src/index.js",
