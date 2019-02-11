@@ -22,8 +22,8 @@ Make sure you have [Node.js](http://nodejs.org/), [Prisma](https://prisma.io), a
 Download and install dependencies.
 
 ```sh
-git clone git@github.com:theranbrig/grown # or clone your own fork
-cd grown
+git clone git@github.com:theranbrig/React-GraphQL-Fullstack-Boilerplate.git # or clone your own fork
+cd React-GraphQL-Fullstack-Boilerplate.git
 <!-- Be sure to install dependencies in both frontend and backend folders -->
 cd frontend
 npm install
