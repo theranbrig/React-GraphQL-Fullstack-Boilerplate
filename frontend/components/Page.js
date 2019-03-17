@@ -1,30 +1,30 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled, { ThemeProvider, injectGlobal } from 'styled-components';
-import Header from '../components/Header';
-import Meta from '../components/Meta';
+import Header from './Header';
+import Meta from './Meta';
+import Nav from './Nav';
 
 const theme = {
-	darkBlue: '#093C64',
-	regularBlue: '#476b97',
-	orange: '#dda01d',
-	lightBlue: '#dcf2ff',
-	black: '#232323',
-	offWhite: '#fefefe'
+  darkBlue: '#093C64',
+  regularBlue: '#476b97',
+  orange: '#dda01d',
+  lightBlue: '#dcf2ff',
+  black: '#232323',
+  offWhite: '#fefefe',
 };
 
 const StyledPage = styled.div`
-	background: ${props => props.theme.offWhite};
-	color: ${props => props.theme.black};
+  background: ${props => props.theme.offWhite};
+  color: ${props => props.theme.black};
 `;
 
 const Inner = styled.div`
-	max-width: ${props => props.theme.maxWidth};
-	margin: 0 auto;
-	padding: 2rem;
+  max-width: ${props => props.theme.maxWidth};
+  margin: 0 auto;
+  padding: 2rem;
 `;
 
 injectGlobal`
-
 	html {
 		box-sizing: border-box;
 	}
@@ -38,19 +38,14 @@ injectGlobal`
 	}
 `;
 
-class Page extends Component {
-	render() {
-		return (
-			<ThemeProvider theme={theme}>
-				<StyledPage>
-					<Meta />
-					<Header />
-					<div />
-					<Inner>{this.props.children}</Inner>
-				</StyledPage>
-			</ThemeProvider>
-		);
-	}
-}
+const Page = props => (
+  <ThemeProvider theme={theme}>
+    <StyledPage>
+      <Meta />
+      <Header />
+      <Inner>{props.children}</Inner>
+    </StyledPage>
+  </ThemeProvider>
+);
 
 export default Page;
